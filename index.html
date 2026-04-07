@@ -1,50 +1,254 @@
-<section id="access" class="py-16 md:py-32 px-4 md:px-6 lg:px-12 bg-[#f4eee1] overflow-hidden relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12 md:mb-24 fade-in-up">
-                <p class="text-gray-500 font-elegant tracking-[0.3em] uppercase text-[10px] md:text-xs mb-2">Location</p>
-                <h2 class="text-4xl md:text-5xl font-elegant text-[#1e3a8a] tracking-wider deco-line uppercase">Access</h2>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAIRSALON FULEN（フレン）| 旭川市東光の美容室・オンラインAGA診療提携</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --color-primary: #1e3a8a; --color-secondary: #f4eee1; --color-accent: #3eb4c8; }
+        body { font-family: 'Noto Sans JP', sans-serif; color: #333; background-color: #fff; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .font-serif-jp { font-family: 'Noto Serif JP', serif; }
+        .font-elegant { font-family: 'Cormorant Garamond', serif; }
+        .hero-image {
+            background-image: linear-gradient(rgba(30, 58, 138, 0.3), rgba(0, 0, 0, 0.5)), url('https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1615747/0a6dddaf393fe5b9473d1eb18c5215c0_504b1f14f7d057302dd58ce7c3cb25f9.jpg?width=1600');
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        .vertical-text { writing-mode: vertical-rl; text-orientation: upright; letter-spacing: 0.2em; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        html { scroll-behavior: smooth; }
+        .deco-line::after { content: ''; display: block; width: 2px; height: 40px; background-color: #1e3a8a; margin: 16px auto 0; }
+        .menu-dot { flex-grow: 1; border-bottom: 1px dotted #ccc; margin: 0 10px; opacity: 0.6; }
+        #logo-img { max-height: 100%; width: auto; transition: all 0.5s ease; }
+    </style>
+</head>
+<body>
+    <header id="header" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-12 flex justify-between items-center h-14 md:h-16">
+            <div class="flex-shrink-0 h-full">
+                <a href="#" class="h-10 md:h-16 inline-block"><img src="fulen.rg.png" alt="FULEN" id="logo-img"></a>
             </div>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#concept" class="text-sm font-elegant tracking-widest text-white nav-link">Concept</a>
+                <a href="#aga" class="text-sm font-elegant tracking-widest text-white nav-link">AGA/FAGA</a>
+                <a href="#menu" class="text-sm font-elegant tracking-widest text-white nav-link">Menu</a>
+                <a href="#stylist" class="text-sm font-elegant tracking-widest text-white nav-link">Stylist</a>
+                <a href="#access" class="text-sm font-elegant tracking-widest text-white nav-link">Access</a>
+                <a href="https://kuroko-partner.github.io/fulen-reserve/" class="bg-[#3eb4c8] text-white px-6 py-2 text-sm font-bold rounded-full shadow-lg">ネット予約</a>
+            </nav>
+            <div class="md:hidden"><button id="mobile-menu-btn" class="text-white p-2"><i class="fa-solid fa-bars text-2xl"></i></button></div>
+        </div>
+        <div id="mobile-menu" class="fixed inset-0 bg-[#1e3a8a] z-40 hidden flex-col justify-center items-center opacity-0 transition-opacity duration-300">
+            <button id="mobile-close-btn" class="absolute top-6 right-6 text-white text-3xl"><i class="fa-solid fa-xmark"></i></button>
+            <div class="flex flex-col items-center space-y-6">
+                <img src="fulen.rg.png" alt="FULEN" class="h-16 mb-8" style="filter: brightness(0) invert(1);">
+                <a href="#concept" class="text-xl text-white uppercase">Concept</a>
+                <a href="#aga" class="text-xl text-white uppercase">AGA/FAGA</a>
+                <a href="#menu" class="text-xl text-white uppercase">Menu</a>
+                <a href="#stylist" class="text-xl text-white uppercase">Stylist</a>
+                <a href="#access" class="text-xl text-white uppercase">Access</a>
+                <a href="https://kuroko-partner.github.io/fulen-reserve/" class="mt-8 bg-[#3eb4c8] text-white px-8 py-3 font-bold rounded-full">ネット予約</a>
+            </div>
+        </div>
+    </header>
 
-            <div class="grid lg:grid-cols-2 gap-6 md:gap-12 items-center bg-white p-5 md:p-8 lg:p-20 shadow-xl rounded-lg fade-in-up border border-gray-100">
-                <div class="text-left w-full">
-                    <h3 class="text-xl md:text-3xl font-elegant text-[#1e3a8a] tracking-wider mb-6 md:mb-14 text-center md:text-left">HAIRSALON FULEN</h3>
-                    <ul class="space-y-6 md:space-y-12">
-                        <li class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0">
-                            <span class="w-full md:w-24 shrink-0 text-[10px] font-elegant uppercase tracking-widest text-gray-400 pt-1">Address</span>
-                            <div class="text-xs md:text-sm font-medium text-gray-700 leading-relaxed flex-1">
-                                〒078-8345<br>北海道旭川市東光5条2丁目2-8<br>
-                                <div class="mt-3 flex flex-wrap gap-3 text-[11px] md:text-xs font-bold">
-                                    <span class="inline-flex items-center gap-1.5 text-[#3eb4c8] bg-cyan-50 px-2 py-1 rounded"><i class="fa-solid fa-square-parking text-sm"></i> 駐車場 2台（店舗前）</span>
-                                    <a href="https://maps.google.co.jp/maps?q=北海道旭川市東光5条2丁目2-8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-blue-600 hover:text-[#1e3a8a] border-b border-blue-600 pb-0.5 transition mt-1 md:mt-0">
-                                        Googleマップで見る
-                                    </a>
-                                </div>
+    <section class="hero-image h-screen flex items-center justify-center relative">
+        <div class="z-10 text-center px-4">
+            <h1 class="text-3xl md:text-6xl text-white font-serif-jp font-light mb-8 tracking-[0.2em] leading-relaxed">素晴らしい出会いをテーマに<br>あなたの“なりたい”を叶える。</h1>
+            <p class="text-[10px] md:text-sm text-gray-200 tracking-[0.3em] uppercase">HAIRSALON FULEN in Asahikawa</p>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <span class="text-white/60 text-[9px] mb-3 uppercase">Scroll</span>
+            <div class="w-[2px] h-10 bg-gradient-to-b from-white to-transparent"></div>
+        </div>
+    </section>
+
+    <section id="concept" class="py-20 md:py-32 px-6 bg-white text-center">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+            <div class="hidden lg:block fade-in-up"><h2 class="vertical-text text-2xl font-serif-jp text-[#1e3a8a] h-[450px]">ダメージを最小限に抑えた、<br>ワンランク上の施術を。</h2></div>
+            <div class="w-full lg:w-6/12 fade-in-up"><img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1615747/674e7b2c23b38a13ed5c3ab324ce1b81_5a915b47664c177d8a53b722a10ca516.jpg?width=1200" class="rounded-lg shadow-xl border-4 border-white"></div>
+            <div class="w-full lg:w-5/12 text-left fade-in-up">
+                <p class="text-gray-400 text-xs mb-2">Our Concept</p>
+                <h2 class="text-4xl text-[#1e3a8a] font-elegant mb-6">FULEN</h2>
+                <div class="text-gray-600 space-y-6 leading-relaxed">
+                    <p>店名の「FULEN」には、素晴らしい出会いがありますようにという思いが込められています。</p>
+                    <p>髪のダメージを抑え、美しさを最大限に引き出す施術をお約束します。グローバルミルボン取扱店。</p>
+                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 flex items-center gap-4">
+                        <i class="fa-solid fa-child text-2xl text-[#3eb4c8]"></i>
+                        <p class="text-sm font-bold text-[#1e3a8a]">キッズスペース完備。親子連れも大歓迎！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aga" class="py-20 bg-[#f4eee1]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <p class="text-gray-500 text-xs mb-2 uppercase">Medical Beauty</p>
+                <h2 class="text-4xl text-[#1e3a8a] font-elegant deco-line">AGA / FAGA</h2>
+                <div class="mt-8 bg-white inline-block px-8 py-3 rounded-full shadow font-bold text-[#1e3a8a]">自由が丘クリニック 提携店</div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-3xl shadow-xl fade-in-up">
+                    <h3 class="text-2xl text-[#1e3a8a] mb-6">美容室 × 美容医療</h3>
+                    <p class="text-gray-600 mb-6">当店を通じて、オンライン診療が可能になりました。</p>
+                    <ul class="space-y-4 font-bold text-gray-500">
+                        <li><i class="fa-solid fa-check text-[#3eb4c8] mr-2"></i>通院の人目が気にならない</li>
+                        <li><i class="fa-solid fa-check text-[#3eb4c8] mr-2"></i>周囲に気づかれたくない</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl fade-in-up">
+                    <h4 class="font-bold text-[#1e3a8a] mb-6 border-b pb-2">セルフチェック</h4>
+                    <div class="space-y-3 text-sm text-gray-600">
+                        <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#3eb4c8]"> 抜け毛が増えてきた</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#3eb4c8]"> 生え際が後退してきた</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#3eb4c8]"> 髪に元気がない</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in-up">
+                <p class="text-gray-400 text-xs mb-2">Service</p>
+                <h2 class="text-4xl text-[#1e3a8a] font-elegant deco-line">Menu</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="fade-in-up">
+                    <h3 class="text-xl text-gray-800 mb-8 border-b pb-4 flex items-center gap-2"><i class="fa-solid fa-cut text-[#3eb4c8]"></i> Standard</h3>
+                    <ul class="space-y-6">
+                        <li><div class="flex justify-between items-end"><span>カット</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥3,850</span></div></li>
+                        <li><div class="flex justify-between items-end"><span>カラーカット</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥8,800〜</span></div></li>
+                        <li><div class="flex justify-between items-end"><span>パーマ(カット込)</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥10,450〜</span></div></li>
+                        <li><div class="flex justify-between items-end"><span>縮毛矯正</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥14,850〜</span></div></li>
+                    </ul>
+                </div>
+                <div class="fade-in-up">
+                    <h3 class="text-xl text-gray-800 mb-8 border-b pb-4 flex items-center gap-2"><i class="fa-solid fa-spa text-[#3eb4c8]"></i> Special Care</h3>
+                    <ul class="space-y-6 mb-12">
+                        <li><div class="flex justify-between items-end"><span>トリートメント</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥4,180〜</span></div></li>
+                        <li><div class="flex justify-between items-end"><span>スパトリートメント</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥4,950〜</span></div></li>
+                    </ul>
+                    <div class="bg-[#f4eee1] p-6 rounded-2xl">
+                        <h4 class="font-bold text-[#1e3a8a] mb-4 border-b border-white pb-2">Kids & School</h4>
+                        <ul class="space-y-4">
+                            <li><div class="flex justify-between items-end"><span>小学生以下</span><div class="menu-dot border-white"></div><span class="font-bold">¥2,200</span></div></li>
+                            <li><div class="flex justify-between items-end"><span>中学生・高校生</span><div class="menu-dot border-white"></div><span class="font-bold">¥2,950</span></div></li>
+                            <li><div class="flex justify-between items-end"><span>大学生 (U24)</span><div class="menu-dot border-white"></div><span class="font-bold">¥3,500</span></div></li>
+                            <li><div class="flex justify-between items-end"><span>学生縮毛矯正</span><div class="menu-dot border-white"></div><span class="font-bold">¥12,650〜</span></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center"><a href="https://kuroko-partner.github.io/fulen-reserve/" class="inline-block bg-[#3eb4c8] text-white px-12 py-4 rounded-full font-bold shadow-xl">空き状況を確認して予約する</a></div>
+        </div>
+    </section>
+
+    <section id="stylist" class="py-20 bg-white px-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="w-64 h-64 rounded-full border-8 border-[#f4eee1] overflow-hidden shadow-2xl fade-in-up">
+                <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1615747/0a6dddaf393fe5b9473d1eb18c5215c0_504b1f14f7d057302dd58ce7c3cb25f9.jpg?width=800" class="w-full h-full object-cover">
+            </div>
+            <div class="text-center md:text-left fade-in-up">
+                <p class="text-gray-400 text-xs uppercase mb-2">Stylist</p>
+                <h3 class="text-4xl text-[#1e3a8a] font-serif-jp mb-6">西村 祐多</h3>
+                <p class="text-gray-600 leading-relaxed">丁寧なカウンセリングと確かな技術で、お客様の“なりたい”を叶えます。ご自宅でも扱いやすいスタイルをご提案します。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="access" class="py-16 bg-[#f4eee1] px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 fade-in-up">
+                <p class="text-gray-500 text-xs mb-2">Location</p>
+                <h2 class="text-4xl text-[#1e3a8a] font-elegant deco-line">Access</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8 bg-white p-8 rounded-3xl shadow-xl fade-in-up">
+                <div class="space-y-8">
+                    <h3 class="text-2xl text-[#1e3a8a] font-elegant">HAIRSALON FULEN</h3>
+                    <ul class="space-y-6">
+                        <li class="flex flex-col gap-1">
+                            <span class="text-[10px] text-gray-400 uppercase">Address</span>
+                            <p class="text-sm font-bold text-gray-700">〒078-8345 北海道旭川市東光5条2丁目2-8</p>
+                            <div class="mt-2 flex gap-2">
+                                <span class="bg-cyan-50 text-[#3eb4c8] px-3 py-1 rounded text-xs font-bold">🅿 駐車場 2台（店舗前）</span>
+                                <a href="https://maps.google.co.jp/maps?q=北海道旭川市東光5条2丁目2-8" target="_blank" class="text-blue-600 text-xs border-b border-blue-600">Googleマップで見る</a>
                             </div>
                         </li>
-                        <li class="flex flex-col md:flex-row md:items-center gap-1 md:gap-0">
-                            <span class="w-full md:w-24 shrink-0 text-[10px] font-elegant uppercase tracking-widest text-gray-400">Tel</span>
-                            <a href="tel:0166856225" class="text-lg md:text-xl font-black text-gray-800 tracking-widest bg-[#f4eee1] px-4 py-1.5 rounded shadow-inner inline-block text-center md:text-left w-max">0166-85-6225</a>
+                        <li class="flex flex-col gap-1">
+                            <span class="text-[10px] text-gray-400 uppercase">Tel</span>
+                            <a href="tel:0166856225" class="text-2xl font-black text-[#1e3a8a]">0166-85-6225</a>
                         </li>
-                        <li class="flex flex-col md:flex-row md:items-start gap-2 md:gap-0">
-                            <span class="w-full md:w-24 shrink-0 text-[10px] font-elegant uppercase tracking-widest text-gray-400 pt-1">Opening</span>
-                            <div class="flex-1 space-y-3 text-[11px] md:text-sm font-medium w-full">
-                                <div class="flex justify-between border-b border-gray-100 pb-1.5"><span class="whitespace-nowrap">火水金土</span><span class="font-black text-gray-700 whitespace-nowrap ml-2">09:30 - 19:00</span></div>
-                                <div class="flex justify-between border-b border-gray-100 pb-1.5"><span class="whitespace-nowrap">木曜日 (ナイター)</span><span class="font-black text-gray-700 whitespace-nowrap ml-2">09:30 - 22:00</span></div>
-                                <div class="flex justify-between border-b border-gray-100 pb-1.5"><span class="whitespace-nowrap">日・祝日</span><span class="font-black text-gray-700 whitespace-nowrap ml-2">09:30 - 17:00</span></div>
+                        <li class="flex flex-col gap-1">
+                            <span class="text-[10px] text-gray-400 uppercase">Opening</span>
+                            <div class="text-sm space-y-1 font-bold text-gray-600">
+                                <div class="flex justify-between border-b pb-1"><span>火水金土</span><span>09:30 - 19:00</span></div>
+                                <div class="flex justify-between border-b pb-1"><span>木曜日 (ナイター)</span><span>09:30 - 22:00</span></div>
+                                <div class="flex justify-between border-b pb-1"><span>日・祝日</span><span>09:30 - 17:00</span></div>
                             </div>
                         </li>
-                        <li class="flex flex-col md:flex-row md:items-center gap-1 md:gap-0">
-                            <span class="w-full md:w-24 shrink-0 text-[10px] font-elegant uppercase tracking-widest text-gray-400 pt-1 md:pt-0">Closed</span>
-                            <div class="flex flex-col text-[11px] md:text-sm font-black tracking-widest text-red-500 bg-red-50 px-3 py-2 rounded">
-                                毎週月曜日・第2火曜日
-                                <span class="text-[9px] md:text-[10px] font-medium text-red-400 mt-0.5">※第3日曜日は不定休となります</span>
-                            </div>
+                        <li class="flex flex-col gap-1">
+                            <span class="text-[10px] text-gray-400 uppercase">Closed</span>
+                            <p class="text-red-500 font-bold">毎週月曜日・第2火曜日 <span class="text-xs text-red-300 block">※第3日曜日は不定休</span></p>
                         </li>
                     </ul>
                 </div>
-                <div class="h-[250px] md:h-[450px] w-full rounded-md overflow-hidden shadow-inner grayscale contrast-125 hover:grayscale-0 transition duration-1000 mt-4 lg:mt-0 border border-gray-100">
+                <div class="h-80 rounded-2xl overflow-hidden shadow-inner border border-gray-100">
                     <iframe src="https://maps.google.co.jp/maps?q=北海道旭川市東光5条2丁目2-8&output=embed&t=m&z=15&hl=ja" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="bg-[#1e3a8a] py-16 text-center">
+        <img src="fulen.rg.png" alt="FULEN" class="h-16 mx-auto mb-10" style="filter: brightness(0) invert(1);">
+        <div class="flex justify-center space-x-10 mb-10 text-gray-300 text-2xl">
+            <a href="#"><i class="fa-solid fa-house"></i></a>
+            <a href="https://www.instagram.com/fulen.asahikawa/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p class="text-[8px] text-gray-400 uppercase">© HAIRSALON FULEN. All Rights Reserved.</p>
+    </footer>
+
+    <div id="floating-btn" class="fixed bottom-6 right-4 z-40 opacity-0 translate-y-4 transition-all duration-700 pointer-events-none">
+        <a href="https://kuroko-partner.github.io/fulen-reserve/" class="bg-[#3eb4c8] text-white px-8 py-4 rounded-full shadow-2xl font-bold uppercase text-xs">
+            <i class="fa-regular fa-calendar-check mr-2"></i> ネット予約
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            const header = document.getElementById('header'), logoImg = document.getElementById('logo-img');
+            const navLinks = document.querySelectorAll('.nav-link'), mobileBtnIcon = document.querySelector('#mobile-menu-btn i'), floatingBtn = document.getElementById('floating-btn');
+            const handleScroll = () => {
+                const scrolled = window.scrollY > 50;
+                header.classList.toggle('bg-white/95', scrolled);
+                header.classList.toggle('shadow-sm', scrolled);
+                header.classList.toggle('py-2', scrolled);
+                logoImg.style.filter = scrolled ? "none" : "brightness(0) invert(1)";
+                navLinks.forEach(link => link.classList.toggle('text-gray-700', scrolled));
+                navLinks.forEach(link => link.classList.toggle('text-white', !scrolled));
+                if(mobileBtnIcon) { mobileBtnIcon.classList.toggle('text-[#1e3a8a]', scrolled); mobileBtnIcon.classList.toggle('text-white', !scrolled); }
+                floatingBtn.classList.toggle('opacity-0', !scrolled);
+                floatingBtn.classList.toggle('translate-y-4', !scrolled);
+                floatingBtn.classList.toggle('pointer-events-none', !scrolled);
+            };
+            window.addEventListener('scroll', handleScroll); handleScroll();
+            const mobileBtn = document.getElementById('mobile-menu-btn'), mobileMenu = document.getElementById('mobile-menu'), closeBtn = document.getElementById('mobile-close-btn');
+            mobileBtn.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10); });
+            const closeMenu = () => { mobileMenu.classList.add('opacity-0'); setTimeout(() => mobileMenu.classList.add('hidden'), 300); };
+            closeBtn.addEventListener('click', closeMenu);
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+        });
+    </script>
+</body>
+</html>
