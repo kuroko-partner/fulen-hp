@@ -159,14 +159,14 @@
                 <div class="fade-in-up bg-white p-6 md:p-10 rounded-2xl shadow-xl">
                     <h4 class="text-sm md:text-lg font-bold text-[#1e3a8a] mb-4 md:mb-6 flex items-center gap-2 border-b-2 border-[#f4eee1] pb-2">
                         <i class="fa-solid fa-clipboard-list text-[#3eb4c8] text-base md:text-xl"></i>
-                        セルフチェックリスト
+                        自分がAGA/FAGAか心配な場合のセルフチェック
                     </h4>
-                    <div class="grid grid-cols-1 gap-y-3 text-[11px] md:text-xs text-gray-700 font-medium">
-                        <label class="flex items-start gap-2"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5"> 抜け毛が増えてきたと感じる</label>
-                        <label class="flex items-start gap-2"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5"> 生え際が後退していると感じる</label>
-                        <label class="flex items-start gap-2"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5"> 頭頂部が薄くなったと感じる</label>
-                        <label class="flex items-start gap-2"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5"> 髪の毛に元気がないと感じる</label>
-                        <label class="flex items-start gap-2"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5"> 食生活が偏っている</label>
+                    <div class="grid grid-cols-1 gap-y-3 text-[11px] md:text-xs text-gray-700 font-medium leading-tight">
+                        <label class="flex items-start gap-2 cursor-pointer"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5 shrink-0"> 抜け毛が増えてきたと感じる</label>
+                        <label class="flex items-start gap-2 cursor-pointer"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5 shrink-0"> 生え際が後退していると感じる</label>
+                        <label class="flex items-start gap-2 cursor-pointer"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5 shrink-0"> 頭頂部が薄くなったと感じる</label>
+                        <label class="flex items-start gap-2 cursor-pointer"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5 shrink-0"> 髪の毛に元気がないと感じる</label>
+                        <label class="flex items-start gap-2 cursor-pointer"><input type="checkbox" class="accent-[#3eb4c8] mt-0.5 shrink-0"> 産毛のように細くて短い髪の毛が増えた</label>
                     </div>
                 </div>
             </div>
@@ -180,22 +180,42 @@
                 <h2 class="text-4xl md:text-5xl font-elegant text-[#1e3a8a] tracking-wider deco-line uppercase">Menu</h2>
                 <p class="mt-8 md:mt-12 text-[9px] md:text-[10px] text-gray-500 tracking-widest uppercase">Tax Included / 税込価格</p>
             </div>
+
             <div class="grid lg:grid-cols-2 gap-x-16 gap-y-12 md:gap-y-16">
                 <div class="fade-in-up">
                     <h3 class="text-xl md:text-2xl font-serif-jp text-gray-800 mb-6 border-b border-gray-100 pb-3 flex items-center gap-2"><i class="fa-solid fa-cut text-[#3eb4c8]"></i> Standard <span class="text-[10px] md:text-sm font-sans text-gray-400 ml-1 md:ml-2">スタンダード</span></h3>
                     <ul class="space-y-4 md:space-y-6">
-                        <li><div class="flex justify-between items-end"><span>カット</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥3,850</span></div></li>
-                        <li><div class="flex justify-between items-end"><span>カラーカット</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥8,800〜</span></div></li>
-                        <li><div class="flex justify-between items-end"><span>縮毛矯正</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥14,850〜</span></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">カット（シャンプーなし）</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥3,850</span></div></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">カラーカット</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥8,800〜</span></div></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">ブリーチ（追加料金）</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥3,850〜</span></div></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">パーマ（カット込）</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥10,450〜</span></div></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">デジタルパーマ（カット込）</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥13,750〜</span></div></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">縮毛矯正</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥14,850〜</span></div></div></li>
                     </ul>
                 </div>
+
                 <div class="fade-in-up">
-                    <h3 class="text-xl md:text-2xl font-serif-jp text-gray-800 mb-6 border-b border-gray-100 pb-3 flex items-center gap-2"><i class="fa-solid fa-spa text-[#3eb4c8]"></i> Special Care <span class="text-[10px] md:text-sm font-sans text-gray-400 ml-1 md:ml-2">トリートメント</span></h3>
+                    <h3 class="text-xl md:text-2xl font-serif-jp text-gray-800 mb-6 border-b border-gray-100 pb-3 flex items-center gap-2"><i class="fa-solid fa-spa text-[#3eb4c8]"></i> Special Care <span class="text-[10px] md:text-sm font-sans text-gray-400 ml-1 md:ml-2">ケア</span></h3>
                     <ul class="space-y-4 md:space-y-6">
-                        <li><div class="flex justify-between items-end"><span>トリートメント</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥4,180〜</span></div></li>
-                        <li><div class="flex justify-between items-end"><span>スパトリートメント</span><div class="menu-dot"></div><span class="text-[#1e3a8a] font-bold">¥4,950〜</span></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">トリートメント</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥4,180〜</span></div></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">スパトリートメント</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥4,950〜</span></div></div></li>
+                        <li><div class="flex justify-between items-end"><div class="bg-white pr-1 md:pr-2 z-10 relative"><span class="text-gray-800 font-medium text-xs md:text-sm">スパトリートメントフレン</span></div><div class="menu-dot"></div><div class="bg-white pl-1 md:pl-2 z-10 relative"><span class="text-[#1e3a8a] font-bold text-base md:text-lg">¥5,830〜</span></div></div></li>
                     </ul>
+
+                    <div class="mt-12 bg-[#f4eee1] p-5 rounded-xl shadow-inner">
+                        <h4 class="text-sm font-bold text-[#1e3a8a] mb-4 border-b border-white pb-2">Kids & School</h4>
+                        <ul class="space-y-4">
+                            <li><div class="flex justify-between items-end"><span>小学生以下</span><div class="menu-dot border-white"></div><span class="font-bold">¥2,200</span></div></li>
+                            <li><div class="flex justify-between items-end"><span>中学生以上 (U24)</span><div class="menu-dot border-white"></div><span class="font-bold">¥2,750</span></div></li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+
+            <div class="mt-16 md:mt-24 text-center">
+                <a href="https://kuroko-partner.github.io/fulen-reserve/" class="inline-block bg-[#3eb4c8] text-white px-10 md:px-16 py-4 md:py-5 rounded-full font-bold tracking-widest hover:scale-105 transition shadow-xl text-[10px] md:text-xs uppercase">
+                    空き状況を確認して予約する
+                </a>
             </div>
         </div>
     </section>
@@ -205,11 +225,11 @@
             <div class="relative w-56 h-56 md:w-72 md:h-72 shrink-0 fade-in-up">
                 <div class="absolute inset-0 border border-gray-100 rounded-full scale-110 -z-10 shadow-lg"></div>
                 <div class="w-full h-full rounded-full shadow-xl border-4 md:border-8 border-white overflow-hidden">
-                    <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1615747/0a6dddaf393fe5b9473d1eb18c5215c0_504b1f14f7d057302dd58ce7c3cb25f9.jpg?width=800" alt="西村 祐多" class="w-full h-full object-cover">
+                    <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1615747/0a6dddaf393fe5b9473d1eb18c5215c0_504b1f14f7d057302dd58ce7c3cb25f9.jpg?width=800" alt="スタイリスト 西村 祐多" class="w-full h-full object-cover">
                 </div>
             </div>
             <div class="fade-in-up text-center md:text-left">
-                <p class="text-gray-400 font-elegant tracking-widest text-[10px] mb-2 uppercase">Stylist</p>
+                <p class="text-gray-400 font-elegant tracking-widest text-[10px] mb-2 md:mb-3 uppercase">Stylist</p>
                 <h3 class="text-3xl md:text-4xl font-serif-jp text-[#1e3a8a] mb-6 md:mb-8 tracking-widest">西村 祐多</h3>
                 <div class="text-gray-600 font-light text-xs md:text-base leading-relaxed space-y-4">
                     <p>お客様の「なりたい」を叶えるため、丁寧なカウンセリングと確かな技術で対応させていただきます。</p>
@@ -225,12 +245,21 @@
                 <p class="text-gray-500 font-elegant tracking-[0.3em] uppercase text-[10px] mb-2">Location</p>
                 <h2 class="text-4xl md:text-5xl font-elegant text-[#1e3a8a] tracking-wider deco-line uppercase">Access</h2>
             </div>
-            <div class="grid lg:grid-cols-2 gap-6 md:gap-12 items-center bg-white p-5 md:p-8 lg:p-20 shadow-xl rounded-lg fade-in-up">
+            <div class="grid lg:grid-cols-2 gap-6 md:gap-12 items-center bg-white p-5 md:p-8 lg:p-20 shadow-xl rounded-lg fade-in-up border border-gray-100">
                 <div class="text-left w-full">
                     <h3 class="text-xl md:text-3xl font-elegant text-[#1e3a8a] tracking-wider mb-6 md:mb-14">HAIRSALON FULEN</h3>
-                    <ul class="space-y-6 md:space-y-12 text-sm font-medium text-gray-700">
-                        <li class="flex items-start"><span class="w-24 shrink-0 text-gray-400 uppercase text-[10px]">Address</span>〒078-8345 北海道旭川市東光5条2丁目2-8</li>
-                        <li class="flex items-center"><span class="w-24 shrink-0 text-gray-400 uppercase text-[10px]">Tel</span><a href="tel:0166856225" class="text-lg font-black tracking-widest">0166-85-6225</a></li>
+                    <ul class="space-y-6 md:space-y-12">
+                        <li class="flex flex-col md:flex-row md:items-start gap-1">
+                            <span class="w-full md:w-24 shrink-0 text-[10px] font-elegant uppercase tracking-widest text-gray-400">Address</span>
+                            <div class="text-xs md:text-sm font-medium text-gray-700 leading-relaxed flex-1">
+                                〒078-8345<br>北海道旭川市東光5条2丁目2-8<br>
+                                <a href="https://maps.google.com/?q=北海道旭川市東光５条２丁目２番８号" target="_blank" class="inline-flex items-center gap-1.5 text-blue-600 border-b border-blue-600 transition mt-3">Googleマップで見る</a>
+                            </div>
+                        </li>
+                        <li class="flex flex-col md:flex-row md:items-center gap-1">
+                            <span class="w-full md:w-24 shrink-0 text-[10px] font-elegant uppercase tracking-widest text-gray-400">Tel</span>
+                            <a href="tel:0166856225" class="text-lg md:text-xl font-black text-gray-800 tracking-widest bg-[#f4eee1] px-4 py-1.5 rounded w-max">0166-85-6225</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="h-[250px] md:h-[450px] w-full rounded-md overflow-hidden border border-gray-100">
@@ -287,10 +316,12 @@
                     link.classList.toggle('text-gray-700', scrolled);
                     link.classList.toggle('text-white', !scrolled);
                 });
+                
                 if(mobileBtnIcon) {
                     mobileBtnIcon.classList.toggle('text-[#1e3a8a]', scrolled);
                     mobileBtnIcon.classList.toggle('text-white', !scrolled);
                 }
+                
                 if(floatingBtn) {
                     floatingBtn.classList.toggle('opacity-0', !scrolled);
                     floatingBtn.classList.toggle('translate-y-4', !scrolled);
