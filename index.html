@@ -28,15 +28,21 @@
             background-attachment: fixed;
         }
 
+        .retro-border { border: 2px solid #1e3a8a; box-shadow: 4px 4px 0px #3eb4c8; }
+        .vertical-text { writing-mode: vertical-rl; text-orientation: upright; letter-spacing: 0.2em; }
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
         .fade-in-up.visible { opacity: 1; transform: translateY(0); }
         html { scroll-behavior: smooth; }
+        .deco-line::after { content: ''; display: block; width: 2px; height: 40px; background-color: #1e3a8a; margin: 16px auto 0; }
+        @media (min-width: 768px) { .deco-line::after { height: 60px; margin: 20px auto 0; } }
+        .menu-dot { flex-grow: 1; border-bottom: 1px dotted #ccc; margin: 0 10px; opacity: 0.6; }
 
-        /* ロゴの初期設定：透過PNGが綺麗に見えるように */
+        /* ロゴ画像の鮮明度と透過維持の設定 */
         #logo-img {
             max-height: 100%;
             width: auto;
-            transition: filter 0.5s ease;
+            object-contain: center;
+            transition: all 0.5s ease;
         }
     </style>
 </head>
@@ -46,11 +52,10 @@
         <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
             <div class="flex justify-between items-center h-14 md:h-16">
                 <div class="flex-shrink-0 flex items-center h-full">
-                    <a href="#" class="h-10 md:h-14 inline-block">
-                        <img src="フレンロゴ.png" alt="HAIRSALON FULEN" id="logo-img">
+                    <a href="#" class="h-12 md:h-16 inline-block">
+                        <img src="fulen.rg.png" alt="HAIRSALON FULEN" id="logo-img">
                     </a>
                 </div>
-
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a href="#concept" class="text-sm font-elegant tracking-widest text-white hover:text-[#3eb4c8] transition nav-link">Concept</a>
                     <a href="#aga" class="text-sm font-elegant tracking-widest text-white hover:text-[#3eb4c8] transition nav-link">AGA/FAGA</a>
@@ -67,11 +72,10 @@
             </div>
         </div>
         
-        <div id="mobile-menu" class="fixed inset-0 bg-[#1e3a8a] z-40 hidden flex-col justify-center items-center opacity-0 transition-opacity duration-300 relative">
-            <div class="absolute inset-0 bg-white opacity-5"></div>
+        <div id="mobile-menu" class="fixed inset-0 bg-[#1e3a8a] z-40 hidden flex-col justify-center items-center opacity-0 transition-opacity duration-300">
             <button id="mobile-close-btn" class="absolute top-6 right-6 text-white text-3xl"><i class="fa-solid fa-xmark"></i></button>
             <div class="flex flex-col items-center space-y-6 z-10">
-                <img src="フレンロゴ.png" alt="FULEN" class="h-12 mb-8" style="filter: brightness(0) invert(1);">
+                <img src="fulen.rg.png" alt="FULEN" class="h-16 mb-8" style="filter: brightness(0) invert(1);">
                 <a href="#concept" class="text-xl font-elegant tracking-widest text-white uppercase">Concept</a>
                 <a href="#aga" class="text-xl font-elegant tracking-widest text-white uppercase">AGA/FAGA</a>
                 <a href="#menu" class="text-xl font-elegant tracking-widest text-white uppercase">Menu</a>
@@ -93,17 +97,22 @@
         </div>
     </section>
 
-    <footer class="bg-[#1e3a8a] py-12 md:py-20 text-center relative overflow-hidden">
+    <footer class="bg-[#1e3a8a] py-12 md:py-20 text-center relative">
         <div class="max-w-7xl mx-auto px-6 text-white relative z-10">
-            <img src="フレンロゴ.png" alt="FULEN" class="h-12 mx-auto mb-10 md:mb-16" style="filter: brightness(0) invert(1);">
-            
+            <img src="fulen.rg.png" alt="FULEN" class="h-16 mx-auto mb-10 md:mb-16" style="filter: brightness(0) invert(1);">
             <div class="flex justify-center space-x-8 md:space-x-10 mb-10 md:mb-16 text-gray-300 text-2xl md:text-3xl">
                 <a href="#" class="hover:text-white transition duration-300"><i class="fa-solid fa-house"></i></a>
-                <a href="https://www.instagram.com/fulen.asahikawa/" target="_blank" class="hover:text-[#3eb4c8] transition duration-300"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/fulen.asahikawa/" target="_blank" rel="noopener noreferrer" class="hover:text-[#3eb4c8] transition duration-300"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="text-[8px] md:text-[9px] text-gray-300 tracking-[0.4em] md:tracking-[0.5em] uppercase font-bold">© HAIRSALON FULEN. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <div id="floating-btn" class="fixed bottom-6 right-4 md:bottom-8 md:right-8 z-40 opacity-0 translate-y-4 transition-all duration-700 pointer-events-none">
+        <a href="https://kuroko-partner.github.io/fulen-reserve/" class="flex items-center justify-center bg-[#3eb4c8] text-white px-5 md:px-8 py-3 md:py-4 rounded-full shadow-2xl hover:scale-105 transition tracking-[0.1em] md:tracking-[0.2em] text-[10px] md:text-[11px] font-bold uppercase">
+            <i class="fa-regular fa-calendar-check mr-2 md:mr-3 text-lg md:text-xl"></i> ネット予約<span class="hidden md:inline">はこちら</span>
+        </a>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -118,8 +127,8 @@
             const mobileBtnIcon = document.querySelector('#mobile-menu-btn i');
             const floatingBtn = document.getElementById('floating-btn');
 
-            // ★ スクロール時の制御ロジックをシンプルに修正
-            const updateHeader = () => {
+            // ★ スクロール時のヘッダー制御（ロゴの白・紺切り替え）
+            const handleScroll = () => {
                 const scrolled = window.scrollY > 50;
                 header.classList.toggle('bg-white/95', scrolled);
                 header.classList.toggle('shadow-sm', scrolled);
@@ -127,10 +136,10 @@
                 header.classList.toggle('py-4', !scrolled);
                 
                 if(!scrolled) {
-                    // 透明背景：ロゴを白くする
+                    // 背景透明時：ロゴを白抜きにする
                     logoImg.style.filter = "brightness(0) invert(1)";
                 } else {
-                    // 白背景：ロゴを元の色に戻す
+                    // 背景白時：ロゴを元の色に戻す
                     logoImg.style.filter = "none";
                 }
 
@@ -138,7 +147,6 @@
                     link.classList.toggle('text-gray-700', scrolled);
                     link.classList.toggle('text-white', !scrolled);
                 });
-                
                 if(mobileBtnIcon) {
                     mobileBtnIcon.classList.toggle('text-[#1e3a8a]', scrolled);
                     mobileBtnIcon.classList.toggle('text-white', !scrolled);
@@ -151,10 +159,10 @@
                 }
             };
 
-            window.addEventListener('scroll', updateHeader);
-            updateHeader(); // 初回実行
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // 初期読み込み時にも適用
 
-            // モバイルメニュー用
+            // モバイルメニュー制御
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const closeBtn = document.getElementById('mobile-close-btn');
@@ -170,7 +178,10 @@
             };
 
             closeBtn.addEventListener('click', closeMenu);
-            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+            
+             mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
         });
     </script>
 </body>
