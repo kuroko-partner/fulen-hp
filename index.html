@@ -111,17 +111,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // フェードインアニメーション用
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
             }, { threshold: 0.1 });
             document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 
             const header = document.getElementById('header');
-            const logoImg = document.getElementById('logo-img'); // 修正：IDを変更
+            const logoImg = document.getElementById('logo-img');
             const navLinks = document.querySelectorAll('.nav-link');
             const mobileBtnIcon = document.querySelector('#mobile-menu-btn i');
             const floatingBtn = document.getElementById('floating-btn');
 
+            // ★ スクロール時のロゴ色制御
             window.addEventListener('scroll', () => {
                 const scrolled = window.scrollY > 50;
                 header.classList.toggle('bg-white/95', scrolled);
@@ -129,17 +131,11 @@
                 header.classList.toggle('py-2', scrolled);
                 header.classList.toggle('py-4', !scrolled);
                 
-                // ★ ロゴの反転ロジック
-                // 背景が白（scrolled=true）の時は「反転なし（元の色が濃い色の場合）」
-                // 背景が透明（scrolled=false）の時は「白抜きにする（invert）」
-                // ※ロゴが元々黒・紺なら以下の設定がスムーズです
-                logoImg.classList.toggle('invert-0', scrolled);
-                logoImg.classList.toggle('brightness-100', scrolled);
-                
-                // 初期の透明背景時は白く見せる
                 if(!scrolled) {
+                    // 透明背景のときはロゴを白く（反転）
                     logoImg.style.filter = "brightness(0) invert(1)";
                 } else {
+                    // 白背景のときは元の色（反転なし）
                     logoImg.style.filter = "none";
                 }
 
@@ -157,6 +153,7 @@
                 floatingBtn.classList.toggle('pointer-events-none', !scrolled);
             });
 
+            // モバイルメニュー制御
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const closeBtn = document.getElementById('mobile-close-btn');
@@ -177,6 +174,9 @@
                     setTimeout(() => mobileMenu.classList.add('hidden'), 300);
                 });
             });
+
+            // ★ 初期状態の設定（スクロールしていない時のロゴ色）
+            logoImg.style.filter = "brightness(0) invert(1)";
         });
     </script>
 </body>
