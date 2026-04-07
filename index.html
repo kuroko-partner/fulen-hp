@@ -22,6 +22,7 @@
         .font-elegant { font-family: 'Cormorant Garamond', serif; }
 
         .hero-image {
+            /* トップ画像 */
             background-image: linear-gradient(rgba(30, 58, 138, 0.3), rgba(0, 0, 0, 0.5)), url('https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1615747/0a6dddaf393fe5b9473d1eb18c5215c0_504b1f14f7d057302dd58ce7c3cb25f9.jpg?width=1600');
             background-size: cover; 
             background-position: center; 
@@ -42,10 +43,13 @@
 
     <header id="header" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-4">
         <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
-            <div class="flex justify-between items-center h-14 md:h-16">
+            <div class="flex justify-between items-center h-16 md:h-20">
                 <div class="flex-shrink-0 flex items-center h-full">
-                    <a href="#" class="h-10 md:h-16 inline-block text-white font-elegant text-2xl md:text-3xl tracking-widest font-bold flex items-center" id="logo-text">
-                        FULEN
+                    <a href="#" class="inline-block h-full flex items-center" id="logo-anchor">
+                        <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1615747/5512be881907792613d523677b1029c7_da67a505f5109315354ff95b36717a61.png?width=400" 
+                             alt="HAIRSALON FULEN" 
+                             id="logo-img"
+                             class="h-12 w-auto md:h-16 transition-all duration-500">
                     </a>
                 </div>
                 <nav class="hidden md:flex space-x-8 items-center">
@@ -114,7 +118,7 @@
                 </div>
                 <div class="text-gray-600 leading-[2.2] font-light text-sm md:text-base text-justify space-y-6 md:space-y-8">
                     <p>店名の「FULEN」には、素晴らしい出会いがありますように、そして素晴らしい出会いだと感じていただけますように、という強い思いが込められています。</p>
-                    <p>お客様一人ひとりの髪質やライフスタイルに寄り添い、本当に似合うスタイルをご提案いたします。</p>
+                    <p>お客様一人ひとりの髪質やライフスタイルに寄り添い, 本当に似合うスタイルをご提案いたします。</p>
                     <p>髪のダメージを最小限に抑えながら、美しさを最大限に引き出すワンランク上の施術をお約束します。グローバルミルボン取扱店。</p>
                     
                     <div class="bg-blue-50/50 p-4 md:p-6 rounded-xl border border-blue-100 shadow-sm mt-8">
@@ -268,7 +272,7 @@
 
             <div class="grid lg:grid-cols-2 gap-6 md:gap-12 items-center bg-white p-5 md:p-8 lg:p-20 shadow-xl rounded-lg fade-in-up border border-gray-100">
                 <div class="text-left w-full">
-                    <h3 class="text-xl md:text-3xl font-elegant text-[#1e3a8a] tracking-wider mb-6 md:mb-14 text-center md:text-left">HAIRSALON FULEN</h3>
+                    <h3 class="text-xl md:text-3xl font-elegant text-[#1e3a8a] tracking-wider mb-8 md:mb-14 text-center md:text-left">HAIRSALON FULEN</h3>
                     <ul class="space-y-6 md:space-y-12">
                         <li class="flex flex-col md:flex-row md:items-start gap-1 md:gap-0">
                             <span class="w-full md:w-24 shrink-0 text-[10px] font-elegant uppercase tracking-widest text-gray-400 pt-1">Address</span>
@@ -326,7 +330,7 @@
                         </p>
                         <p class="text-[11px] md:text-xs text-gray-700 leading-relaxed">
                             キャッシュレス決済のお客様に関しては、<strong>割引率が10%まで</strong>となります。<br>
-                            今まで通り、<strong>現金払いが最もお得</strong>になっておりますので、ぜひ現金でのご用意をお願いいたします🙇
+                            今まで通り, <strong>現金払いが最もお得</strong>になっておりますので, ぜひ現金でのご用意をお願いいたします🙇
                         </p>
                     </div>
                 </div>
@@ -334,15 +338,18 @@
         </div>
     </section>
 
-    <footer class="bg-[#1e3a8a] py-12 md:py-20 text-center">
-        <div class="max-w-7xl mx-auto px-6 text-white relative">
-            <div class="absolute inset-0 bg-white opacity-5"></div>
-            <h2 class="text-3xl md:text-4xl font-elegant font-bold tracking-widest mb-10 md:mb-16 relative z-10">FULEN</h2>
-            <div class="flex justify-center space-x-8 md:space-x-10 mb-10 md:mb-16 text-gray-300 text-2xl md:text-3xl relative z-10">
+    <footer class="bg-[#1e3a8a] py-12 md:py-20 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-white opacity-5"></div>
+        <div class="max-w-7xl mx-auto px-6 text-white relative z-10">
+            <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1615747/5512be881907792613d523677b1029c7_da67a505f5109315354ff95b36717a61.png?width=200" 
+                 alt="FULEN" 
+                 class="h-10 mx-auto mb-10 opacity-70">
+            
+            <div class="flex justify-center space-x-8 md:space-x-10 mb-10 md:mb-16 text-gray-300 text-2xl md:text-3xl">
                 <a href="#" class="hover:text-white transition duration-300" title="Homepage"><i class="fa-solid fa-house"></i></a>
                 <a href="https://www.instagram.com/fulen.asahikawa/" target="_blank" rel="noopener noreferrer" class="hover:text-[#3eb4c8] transition duration-300" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <p class="text-[8px] md:text-[9px] text-gray-300 tracking-[0.4em] md:tracking-[0.5em] uppercase font-bold relative z-10">© HAIRSALON FULEN. All Rights Reserved.</p>
+            <p class="text-[8px] md:text-[9px] text-gray-300 tracking-[0.4em] md:tracking-[0.5em] uppercase font-bold">© HAIRSALON FULEN. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -360,35 +367,48 @@
             document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 
             const header = document.getElementById('header');
-            const logoText = document.getElementById('logo-text');
+            const logoAnchor = document.getElementById('logo-anchor');
+            const logoImg = document.getElementById('logo-img');
             const navLinks = document.querySelectorAll('.nav-link');
             const mobileBtnIcon = document.querySelector('#mobile-menu-btn i');
             const floatingBtn = document.getElementById('floating-btn');
 
             window.addEventListener('scroll', () => {
                 const scrolled = window.scrollY > 50;
+                // ヘッダーの背景・高さを変更
                 header.classList.toggle('bg-white/95', scrolled);
                 header.classList.toggle('shadow-sm', scrolled);
                 header.classList.toggle('py-2', scrolled);
                 header.classList.toggle('py-4', !scrolled);
                 
-                logoText.classList.toggle('text-[#1e3a8a]', scrolled);
-                logoText.classList.toggle('text-white', !scrolled);
+                // ★ロゴ画像のサイズを変更し, 色をロゴの青（primary）に戻す（今回は画像なのでサイズ変更のみ）
+                if(scrolled) {
+                    logoImg.classList.add('h-10'); // 小さくする
+                    logoImg.classList.remove('h-12', 'md:h-16'); 
+                } else {
+                    logoImg.classList.add('h-12', 'md:h-16'); // 元に戻す
+                    logoImg.classList.remove('h-10');
+                }
 
+                // ナビゲーションの文字色を変更
                 navLinks.forEach(link => {
                     link.classList.toggle('text-gray-700', scrolled);
                     link.classList.toggle('text-white', !scrolled);
                 });
+                
+                // モバイルボタンの色を変更
                 if(mobileBtnIcon) {
                     mobileBtnIcon.classList.toggle('text-[#1e3a8a]', scrolled);
                     mobileBtnIcon.classList.toggle('text-white', !scrolled);
                 }
                 
+                // フローティングボタンの表示・非表示
                 floatingBtn.classList.toggle('opacity-0', !scrolled);
                 floatingBtn.classList.toggle('translate-y-4', !scrolled);
                 floatingBtn.classList.toggle('pointer-events-none', !scrolled);
             });
 
+            // モバイルメニューの開閉
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const closeBtn = document.getElementById('mobile-close-btn');
